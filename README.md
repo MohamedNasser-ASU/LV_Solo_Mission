@@ -57,6 +57,7 @@ To be added
 - `HAL_ADC_Stop()` —  UM1850, HAL generic APIs section, page 21, used it to stop adc1
 - `HAL_ADC_PollForConversion()` —  UM1850, HAL generic APIs section, page 21, used it for waiting for the end of conversions
 - `HAL_ADC_GetValue()` —  UM1850, ADC Firmware driver API section 7.2.4, page 66, used it to get ADC regular group conversion result
+- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to send the formatted telemetry string through USART1
 ---
 
 ## Milestone 3
