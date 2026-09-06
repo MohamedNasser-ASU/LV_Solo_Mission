@@ -56,7 +56,7 @@ To be added
 - `HAL_ADC_Start()` —  UM1850, HAL generic APIs section, page 20, used it to start adc1
 - `HAL_ADC_Stop()` —  UM1850, HAL generic APIs section, page 21, used it to stop adc1
 - `HAL_ADC_PollForConversion()` —  UM1850, HAL generic APIs section, page 21, used it for waiting for the end of conversions
-- `HAL_ADC_GetValue()` —  UM1850, ADC Firmware driver API description section, page 66, used it to get ADC regular group conversion result
+- `HAL_ADC_GetValue()` —  UM1850, ADC Firmware driver API section 7.2.4, page 66, used it to get ADC regular group conversion result
 ---
 
 ## Milestone 3
