@@ -35,7 +35,7 @@ LV_Solo_Mission/
 **Status:** Complete
 
 **Simulation Video:**  
-https://github.com/user-attachments/assets/82536018-6356-45b1-b76c-fcdd36dd9904
+///////////// link here
 
 ### HAL Functions Used
 
