@@ -26,6 +26,11 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+	typedef struct {
+		uint16_t id;
+		float voltage;
+		uint16_t speed;
+	} Case;
 
 /* USER CODE END PTD */
 
@@ -91,11 +96,35 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t rxByte;
-  uint8_t dummyTx;
+  // testing
+//  uint8_t rxByte;
 
+  uint8_t dummyTx[2] = {0}; // used when recieving caseID communication
+  uint8_t dummyRx[3] = {0}; // used when returning case telemetry
+  uint8_t requestBytes[2]; // request bytes recieved from master
+  uint16_t requestId = 0x0000;	// id came from master
 
+  // selected values
+  float selectedVoltage = 0;
+  uint16_t selectedSpeed = 0;
 
+  // encoded value
+  uint16_t voltageRaw;
+  uint16_t speedRaw;
+  uint32_t packedData; // both raw volts and speed
+
+  // SPI communication
+  uint8_t txData[3];
+
+  // array of structs
+  // initialize cases
+  Case cases[5] = {
+		  {0x1001, 12.3, 200},
+  		  {0x1002, 14.2, 150},
+  		  {0x1003, 13.8, 100},
+  		  {0x1004, 11.5, 220},
+  		  {0x1005, 10.9, 280},
+  	  };
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,15 +137,43 @@ int main(void)
 
 	  HAL_SPI_TransmitReceive(
 	      &hspi1,
-	      &dummyTx,
-	      &rxByte,
-	      1,
+	      dummyTx,
+		  requestBytes,
+	      2,
 		  HAL_MAX_DELAY
 	  );
 
-	  if (rxByte == 0x5A) {
-		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+	  requestId = (requestBytes[0] << 8 ) | 0x00;
+	  requestId |= requestBytes[1];
+
+	  for(int i = 0; i < 5; i++){
+		  // match
+		  if (cases[i].id == requestId) {
+			  selectedVoltage = cases[i].voltage;
+			  selectedSpeed = cases[i].speed;
+			  break;
+		  }
 	  }
+	  voltageRaw = selectedVoltage * 4095 / 24;  // from 0 -> 24 volts to 0 -> 4095
+	  speedRaw = selectedSpeed * 4095 / 300;     // from 0 -> 300 km/h to 0 -> 4095
+
+	  packedData = ( voltageRaw << 12 );
+	  packedData |=  speedRaw;
+
+	  txData[0] = (packedData >> 16) & 0xFF;
+	  txData[1] = (packedData >> 8) & 0xFF;
+	  txData[2] = packedData & 0xFF;
+
+	  HAL_SPI_TransmitReceive(
+	      &hspi1,
+	      txData,
+	      dummyRx,
+	      3,
+		  HAL_MAX_DELAY
+	  );
+
+
+
 
   }
   /* USER CODE END 3 */

@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include <stdio.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -95,8 +95,31 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t txByte = 0x5A;
-  uint8_t dummyRx;
+  	// check communication
+//  uint8_t txByte = 0x5A;
+//  uint8_t dummyRx;
+
+
+  uint8_t rxChar;  // user input char
+  uint8_t caseId; // convert recieved char to number
+  uint16_t requestId; // requested case id
+  uint8_t requestBytes[2]; // split the 16 bit request into 2 bytes
+  uint8_t dummyRx[2]; // dummy buffer
+
+  uint8_t dummyTx[3] = {0}; // dummy bytes for 2nd recieve
+  uint8_t responseBytes[3];	// response buffer
+  uint32_t packedData; // construct response bytes
+
+  uint16_t voltageRaw;
+  uint16_t speedRaw;
+
+  uint16_t voltageTenth;
+  uint16_t speed;
+
+  // uart message
+  char message[100];
+  int msg;
+
 
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
@@ -110,19 +133,76 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_UART_Receive(
+	      &huart1,
+	      &rxChar,
+	      1,
+		  HAL_MAX_DELAY
+	  );
 
-	HAL_SPI_TransmitReceive(
-	    &hspi1,
-	    &txByte,
-	    &dummyRx,
-	    1,
-		HAL_MAX_DELAY
-	);
+	  caseId = rxChar - '0';
 
-	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+	  if (caseId >= 1 && caseId <= 5){
 
-	HAL_Delay(500);
+		  requestId = 0x1000 + caseId;
+		  requestBytes[0] = (requestId >> 8) & 0xFF;
+		  requestBytes[1] = requestId & 0xFF;
+
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET); // reset to start exchange
+
+		  HAL_SPI_TransmitReceive(
+		      &hspi1,
+			  requestBytes,
+		      dummyRx,
+		      2,
+			  HAL_MAX_DELAY
+		  );
+
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+
+		  HAL_Delay(100);
+
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET); // reset to start 2nd exchange
+
+		  HAL_SPI_TransmitReceive(
+				  &hspi1,
+				  dummyTx,
+				  responseBytes,
+				  3,
+				  HAL_MAX_DELAY
+		  );
+
+		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+
+
+		  packedData = (responseBytes[0] << 16) | (responseBytes[1] << 8) | responseBytes[2];
+
+		  voltageRaw = packedData >> 12;
+		  speedRaw = packedData & 0xFFF;
+
+		  ///////////
+		  voltageTenth = (uint16_t)(((float)voltageRaw * 240.0f / 4095.0f) + 0.5f);
+		  speed = (uint16_t)(((float)speedRaw * 300.0f / 4095.0f) + 0.5f);
+		  ///////////
+
+
+		  msg = snprintf(
+		      message,
+		      sizeof(message),
+		      "Voltage = %u.%u V | Wheel Speed = %u km/h\r\n",
+		      voltageTenth / 10,
+		      voltageTenth % 10,
+		      speed
+		  );
+
+		  HAL_UART_Transmit(
+		      &huart1,
+		      (uint8_t *)message,
+		      msg,
+		      HAL_MAX_DELAY
+		  );
+
+	  }
 
   }
   /* USER CODE END 3 */
