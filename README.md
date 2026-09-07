@@ -47,17 +47,28 @@ LV_Solo_Mission/
 ## Milestone 2
 
 **Goal:** Read Engine Temperature and Throttle Position using ADC and display them through UART.  
-**Status:** Pending
+**Status:** Complete
+
+**Configuration:**
+- PA0 / ADC Channel 0 → Engine Temperature
+- PA1 / ADC Channel 1 → Throttle Position
+- USART1 TX / PA9 → Virtual Terminal RX
+- UART Baud Rate: 9600
+- Continuous Conversion Mode: Disabled
+- DMA: Disabled
 
 **Simulation Video:**  
-To be added
+PASTE_VIDEO_LINK_HERE
 
 **HAL Functions Used:**  
-- `HAL_ADC_Start()` —  UM1850, HAL generic APIs section, page 20, used it to start adc1
-- `HAL_ADC_Stop()` —  UM1850, HAL generic APIs section, page 21, used it to stop adc1
-- `HAL_ADC_PollForConversion()` —  UM1850, HAL generic APIs section, page 21, used it for waiting for the end of conversions
-- `HAL_ADC_GetValue()` —  UM1850, ADC Firmware driver API section 7.2.4, page 66, used it to get ADC regular group conversion result
-- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to send the formatted telemetry string through USART1
+- `HAL_ADC_ConfigChannel()` — UM1850, ADC Firmware Driver API section 7.2.5, page 68, used to select and configure each ADC channel before conversion.
+- `HAL_ADC_Start()` — UM1850, HAL generic APIs section, page 20, used to start ADC1.
+- `HAL_ADC_Stop()` — UM1850, HAL generic APIs section, page 21, used to stop ADC1.
+- `HAL_ADC_PollForConversion()` — UM1850, HAL generic APIs section, page 21, used to wait for the ADC conversion to finish.
+- `HAL_ADC_GetValue()` — UM1850, ADC Firmware Driver API section 7.2.4, page 66, used to retrieve the ADC regular conversion result.
+- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to transmit the formatted telemetry values through USART1.
+- `HAL_Delay()` — UM1850, HAL Control Functions section, page 50, used to delay 500 ms between telemetry updates.
+
 ---
 
 ## Milestone 3
