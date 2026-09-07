@@ -58,7 +58,7 @@ LV_Solo_Mission/
 - DMA: Disabled
 
 **Simulation Video:**  
-PASTE_VIDEO_LINK_HERE
+https://github.com/user-attachments/assets/611c3213-ee49-4d36-bd5b-77a2420a02ef
 
 **HAL Functions Used:**  
 - `HAL_ADC_ConfigChannel()` — UM1850, ADC Firmware Driver API section 7.2.5, page 68, used to select and configure each ADC channel before conversion.
