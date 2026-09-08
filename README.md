@@ -94,7 +94,7 @@ https://github.com/user-attachments/assets/a5b607df-14f3-4ca9-a293-1a460f671be8
 - Two SPI communication cycles used for request/response synchronization
 
 **Simulation Video:**  
-PASTE_M3_VIDEO_LINK_HERE
+https://github.com/user-attachments/assets/4955ffba-1f2b-4fc0-b7fc-75255b65803c
 
 **HAL Functions Used:**  
 - `HAL_SPI_TransmitReceive()` — UM1850, SPI Firmware Driver API section 35.2.3, page 449, used for full-duplex SPI communication between the Master and Slave.
