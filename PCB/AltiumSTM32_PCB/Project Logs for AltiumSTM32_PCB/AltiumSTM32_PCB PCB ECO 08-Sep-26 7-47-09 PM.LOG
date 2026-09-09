@@ -1,0 +1,16 @@
+Added Component: Designator=J3(TC2030-IDC-NL)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "TC2030-IDC-NL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TC2030-IDC-NL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "TC2030-IDC-NL.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=J3-1
+Added Pin To Net: NetName=MCU_SWDIO Pin=J3-2
+Added Pin To Net: NetName=MCU_NRST Pin=J3-3
+Added Pin To Net: NetName=MCU_SWCLK Pin=J3-4
+Added Pin To Net: NetName=GND Pin=J3-5
+Added Pin To Net: NetName=MCU_SWO Pin=J3-6
