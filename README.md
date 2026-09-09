@@ -44,7 +44,7 @@ https://github.com/user-attachments/assets/bc5a88b9-e137-413c-80d8-96b1d135919c
 ### HAL Functions Used
 
 - `HAL_GPIO_TogglePin()` — UM1850, GPIO section, page 228, used it to toggle the state of PC13
-- `HAL_Delay()` — UM1850, HAL system driver section, page 50, used it to make a 500ms delay
+- `HAL_Delay()` — UM1850, HAL initialization section, page 32, used it to make a 500ms delay
 
 ---
 
@@ -65,13 +65,12 @@ https://github.com/user-attachments/assets/bc5a88b9-e137-413c-80d8-96b1d135919c
 https://github.com/user-attachments/assets/a5b607df-14f3-4ca9-a293-1a460f671be8
 
 **HAL Functions Used:**  
-- `HAL_ADC_ConfigChannel()` — UM1850, ADC Firmware Driver API section 7.2.5, page 68, used to select and configure each ADC channel before conversion.
+- `HAL_ADC_ConfigChannel()` — UM1850, Peripheral Control functions section 7.2.5, page 67, used to select and configure each ADC channel before conversion.
 - `HAL_ADC_Start()` — UM1850, HAL generic APIs section, page 20, used to start ADC1.
 - `HAL_ADC_Stop()` — UM1850, HAL generic APIs section, page 21, used to stop ADC1.
 - `HAL_ADC_PollForConversion()` — UM1850, HAL generic APIs section, page 21, used to wait for the ADC conversion to finish.
-- `HAL_ADC_GetValue()` — UM1850, ADC Firmware Driver API section 7.2.4, page 66, used to retrieve the ADC regular conversion result.
-- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to transmit the formatted telemetry values through USART1.
-- `HAL_Delay()` — UM1850, HAL Control Functions section, page 50, used to delay 500 ms between telemetry updates.
+- `HAL_ADC_GetValue()` — UM1850, ADC Firmware Driver API section 7.2.4, page 60, used to retrieve the ADC regular conversion result.
+- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.7, page 556, used to transmit the formatted telemetry values through USART1.
 
 ---
 
@@ -101,10 +100,10 @@ https://github.com/user-attachments/assets/a5b607df-14f3-4ca9-a293-1a460f671be8
 https://github.com/user-attachments/assets/4955ffba-1f2b-4fc0-b7fc-75255b65803c
 
 **HAL Functions Used:**  
-- `HAL_SPI_TransmitReceive()` — UM1850, SPI Firmware Driver API section 35.2.3, page 449, used for full-duplex SPI communication between the Master and Slave.
-- `HAL_UART_Receive()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to receive the Case ID entered through the Virtual Terminal.
-- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.4, page 556, used to display the decoded Voltage Level and Wheel Speed on the Virtual Terminal.
-- `HAL_GPIO_WritePin()` — UM1850, GPIO Firmware Driver API section 20.2.4, page 227, used by the Master to manually control PB0 as the SPI chip-select line.
+- `HAL_SPI_TransmitReceive()` — UM1850, SPI Firmware Driver API section 35.2.3, page 452, used for full-duplex SPI communication between the Master and Slave.
+- `HAL_UART_Receive()` — UM1850, UART Firmware Driver API section 38.2.7, page 556, used to receive the Case ID entered through the Virtual Terminal.
+- `HAL_UART_Transmit()` — UM1850, UART Firmware Driver API section 38.2.7, page 556, used to transmit the formatted telemetry values through USART1.
+- `HAL_GPIO_WritePin()` — UM1850, GPIO Firmware Driver API section 20.2.4, page 226, used by the Master to manually control PB0 as the SPI chip-select line.
 - `HAL_Delay()` — UM1850, HAL Control Functions section, page 50, used to provide synchronization time between SPI communication cycles.
 
 ---
