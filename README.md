@@ -107,8 +107,37 @@ https://github.com/user-attachments/assets/4955ffba-1f2b-4fc0-b7fc-75255b65803c
 
 ---
 
-# PCB Project
+## PCB Design
 
-**Goal:** Complete the required STM32 PCB design in Altium Designer and generate the Gerber and drill files.  
-**Status:** Pending
+**MCU:** STM32F411CEU6  
+**Goal:** Design a 4-layer STM32 PCB following the Phil's Lab walkthrough.  
+**Status:** Complete
+**Note:** I know this is not the perfect PCB, I tried my best to follow up with Phil and to produce the best output I can. However, I am fairly proud of what i have done specially since this is my first time ever designing or even knowing how PCB's are made. 
 
+The board includes the STM32F411, USB, MPU6050 IMU, SWD programming, power circuitry, and GPIO headers.
+
+### PCB Images
+
+**3D Front:**  
+jdkghaskldjakjdh
+
+**3D Back:**  
+jdkghaskldjakjdh
+
+**3D Angled:**  
+jdkghaskldjakjdh
+
+**2D Front:**  
+jdkghaskldjakjdh
+
+### Schematic
+
+jdkghaskldjakjdh
+
+### Files
+
+- `PCB/AltiumSTM32_PCB/` — Altium project files
+- `PCB/Gerbers/` — Gerber and drill files
+- `PCB/CubeIDE/` — STM32CubeIDE project
+
+---
