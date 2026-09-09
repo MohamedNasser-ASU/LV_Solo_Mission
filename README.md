@@ -7,6 +7,12 @@ This repository contains my work for the Low Voltage Individual Technical Missio
 ```text
 LV_Solo_Mission/
 │
+├── PCB/
+│   ├── AltiumSTM32_PCB/
+│   ├── CubeIDE/
+│   ├── Gerbers/
+│   └── Images/
+│
 ├── STM32/
 │   ├── Milestone_1/
 │   │   ├── CubeIDE/
@@ -20,8 +26,6 @@ LV_Solo_Mission/
 │       ├── Master/
 │       ├── Slave/
 │       └── Proteus/
-│
-├── PCB/
 │
 └── README.md
 ```
