@@ -137,62 +137,66 @@ DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Keep-out.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Legend_Top.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Legend_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Mechanical_1.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Legend_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_NPTH_Drill.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Mechanical_1.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Pads_Bot.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_NPTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Pads_Top.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Pads_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Paste_Bot.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Pads_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Paste_Top.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Paste_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Profile.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Paste_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_PTH_Drill.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Profile.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Soldermask_Bot.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_PTH_Drill.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Soldermask_Top.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_3D_Body.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Soldermask_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_Assembly.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_3D_Body.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_Component_Center.gbr
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_Assembly.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument24]
+DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_Component_Center.gbr
+DItemRevisionGUID=
+
+[GeneratedDocument25]
 DocumentPath=Project Outputs for AltiumSTM32_PCB\AltiumSTM32_PCB_Top_Courtyard.gbr
 DItemRevisionGUID=
 
@@ -476,7 +480,7 @@ OutputDefault5=0
 Configuration5_Name1=ForceUpdateSettings
 Configuration5_Item1=False
 Configuration5_Name2=OutputConfigurationParameter1
-Configuration5_Item2=BoardID=GDHWVNVN|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=False|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=50|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotCounterHolesPairs=False|PlotDrillDrawingPair0_Backdrill=False|PlotDrillDrawingPair0_Checked=True|PlotDrillDrawingPair0_DrillType=Regular|PlotDrillDrawingPair0_FileName= |PlotDrillDrawingPair0_HighLayer=Bottom Layer|PlotDrillDrawingPair0_LowLayer=Top Layer|PlotDrillDrawingPairs=False|PlotDrillGuidePair0_Backdrill=False|PlotDrillGuidePair0_Checked=True|PlotDrillGuidePair0_DrillType=Regular|PlotDrillGuidePair0_FileName= |PlotDrillGuidePair0_HighLayer=Bottom Layer|PlotDrillGuidePair0_LowLayer=Top Layer|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPair0_Backdrill=False|PlotNPTHPair0_Checked=True|PlotNPTHPair0_DrillType=Regular|PlotNPTHPair0_FileName= |PlotNPTHPair0_HighLayer=Top Layer|PlotNPTHPair0_LowLayer=Bottom Layer|PlotNPTHPairs=False|PlotPTHPair0_Backdrill=False|PlotPTHPair0_Checked=True|PlotPTHPair0_DrillType=Regular|PlotPTHPair0_FileName= |PlotPTHPair0_HighLayer=Top Layer|PlotPTHPair0_LowLayer=Bottom Layer|PlotPTHPairs=False|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16777218~1,16777219~1,16842751~1,16973830~1,16973834~1,16973835~1,16973832~1,16973833~1,16908289~1,16908293~1,16908301~1,16908303~1,16908304~1,16973837~1,16973848~1,16973849~1|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False|DocumentPath=C:\Users\Mohamed\Desktop\Racing Team\LV_Solo_Mission\PCB\AltiumSTM32_PCB\AltiumSTM32_PCB.PcbDoc
+Configuration5_Item2=BoardID=GDHWVNVN|FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=False|GenerateReports=True|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|MergePadAndRegion=False|MinusApertureTolerance=50|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OutputFormat=Single|PlotBackDrillingPairs=False|PlotBlindViasPairs=False|PlotBoardProfile=False|PlotBoardProfileFileName= |PlotCounterHolesPairs=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotMicroViasPairs=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotViaTypeDrillDrawingPairs=False|PlotViaTypeDrillGuidePairs=False|PlotViaTypeDrillPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16973831~1|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False|UncheckPlotDrillDrawingPair0_Backdrill=False|UncheckPlotDrillDrawingPair0_Checked=False|UncheckPlotDrillDrawingPair0_DrillType=Regular|UncheckPlotDrillDrawingPair0_FileName= |UncheckPlotDrillDrawingPair0_HighLayer=Bottom Layer|UncheckPlotDrillDrawingPair0_LowLayer=Top Layer|UncheckPlotDrillGuidePair0_Backdrill=False|UncheckPlotDrillGuidePair0_Checked=False|UncheckPlotDrillGuidePair0_DrillType=Regular|UncheckPlotDrillGuidePair0_FileName= |UncheckPlotDrillGuidePair0_HighLayer=Bottom Layer|UncheckPlotDrillGuidePair0_LowLayer=Top Layer|UncheckPlotNPTHPair0_Backdrill=False|UncheckPlotNPTHPair0_Checked=False|UncheckPlotNPTHPair0_DrillType=Regular|UncheckPlotNPTHPair0_FileName= |UncheckPlotNPTHPair0_HighLayer=Top Layer|UncheckPlotNPTHPair0_LowLayer=Bottom Layer|UncheckPlotPTHPair0_Backdrill=False|UncheckPlotPTHPair0_Checked=False|UncheckPlotPTHPair0_DrillType=Regular|UncheckPlotPTHPair0_FileName= |UncheckPlotPTHPair0_HighLayer=Top Layer|UncheckPlotPTHPair0_LowLayer=Bottom Layer|DocumentPath=C:\Users\Mohamed\Desktop\Racing Team\LV_Solo_Mission\PCB\AltiumSTM32_PCB\AltiumSTM32_PCB.PcbDoc
 OutputType6=IPC2581
 OutputName6=IPC-2581 Files
 OutputDocumentPath6=
