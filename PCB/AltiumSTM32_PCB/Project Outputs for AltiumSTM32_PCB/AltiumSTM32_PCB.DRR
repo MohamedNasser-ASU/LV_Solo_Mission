@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: AltiumSTM32_PCB.PcbDoc   09-Sep-26  11:16:29 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : L1 (SIGNAL) to L4 (SIGNAL)
+ASCII RoundHoles File : AltiumSTM32_PCB.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.2mm (8mil)                                              Round             29        PTH        42.32mm (1.67inch)
+T2      0.25mm (10mil)                                            Round             31        PTH        153.63mm (6.05inch)
+T3      0.3mm (12mil)                                             Round             3         PTH        10.10mm (0.40inch)
+T4      0.4mm (16mil)                                             Round             56        PTH        195.15mm (7.68inch)
+T5      2.2mm (87mil)                                             Round             4         PTH        92.00mm (3.62inch)
+T6      0.995mm (39mil)                                           Round             3         NPTH       7.21mm (0.28inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              126
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [AltiumSTM32_PCB.PrjPcb]
+   Generated File[AltiumSTM32_PCB.TXT]
+   Generated File[AltiumSTM32_PCB.LDP]
+   Generated File[AltiumSTM32_PCB.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 11:16:29 PM On 09-Sep-26
