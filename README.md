@@ -136,8 +136,8 @@ The board includes the STM32F411, USB, MPU6050 IMU, SWD programming, power circu
 ### Schematic
 [Schematic.pdf](https://github.com/user-attachments/files/32005760/Schematic.pdf)
 
-### Files
-
+### Notes
+- `Official HAL documentation ` — [doc](https://github.com/user-attachments/files/32027026/um1850-description-of-stm32f1-hal-and-lowlayer-drivers-stmicroelectronics.pdf)
 - `PCB/AltiumSTM32_PCB/` — Altium project files
 - `PCB/Gerbers/` — Gerber and drill files
 - `PCB/CubeIDE/` — STM32CubeIDE project
