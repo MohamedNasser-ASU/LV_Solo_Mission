@@ -125,7 +125,7 @@ The board includes the STM32F411, USB, MPU6050 IMU, SWD programming, power circu
 <img width="1036" height="953" alt="Image" src="https://github.com/user-attachments/assets/b2e21d37-6dc4-4b7e-97e3-439354c28b3b" />
 
 **3D Angled:**  
-jdkghaskldjakjdh
+<img width="985" height="899" alt="Image" src="https://github.com/user-attachments/assets/78f411b6-d291-463e-9b02-ce357fd36feb" />
 
 **2D Front:**  
 jdkghaskldjakjdh
